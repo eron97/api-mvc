@@ -22,5 +22,5 @@ func CreateUser(c *gin.Context) {
 		return
 	}
 
-	c.JSON(http.StatusOK, userRequest)
+	c.JSON(http.StatusOK, "Usuário criado com sucesso!")
 }
