@@ -14,6 +14,14 @@ type Causes struct {
 	Message string `json:"message" example:"name is required"`
 }
 
+/*
+	Go possui uma interface predefinida `error` que contém apenas um método
+	chamado `Error() string` e quando uma estrutura o implementa então ela
+	se torna compátivel com a interface.
+
+	Na estrutura abaixo podemos ver que ela é implementada por struct RestErr{}
+*/
+
 func (r *RestErr) Error() string {
 	return r.Message
 }
